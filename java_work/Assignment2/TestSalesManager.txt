@@ -1,0 +1,91 @@
+class SalesManager {
+    int id;
+    String name;
+    double salary;
+    double incentive;
+    int target;
+
+    SalesManager() {
+        System.out.println("Constructor called");
+        this.id = 101;
+        this.name = "Default Name";
+        this.salary = 50000;
+        this.incentive = 5000;
+        this.target = 50;
+    }
+
+    void setId(int i) {
+        this.id = i;
+    }
+
+    void setName(String n) {
+        this.name = n;
+    }
+
+    void setSalary(double s) {
+        this.salary = s;
+    }
+
+    void setIncentive(double i) {
+        this.incentive = i;
+    }
+
+    void setTarget(int t) {
+        this.target = t;
+    }
+
+    int getId() {
+        return this.id;
+    }
+
+    String getName() {
+        return this.name;
+    }
+
+    double getSalary() {
+        return this.salary;
+    }
+
+    double getIncentive() {
+        return this.incentive;
+    }
+
+    int getTarget() {
+        return this.target;
+    }
+
+    void display() {
+        System.out.println(" Sales Manager Id        : " + this.id);
+        System.out.println(" Sales Manager Name      : " + this.name);
+        System.out.println(" Sales Manager Salary    : " + this.salary);
+        System.out.println(" Sales Manager Incentive : " + this.incentive);
+        System.out.println(" Sales Manager Target    : " + this.target);
+    }
+}
+//class SalesManager ends here
+
+class TestSalesManager {
+    public static void main(String[] args) {
+        SalesManager s1, s2;
+        s1 = new SalesManager();
+        s2 = new SalesManager();
+
+        s1.setId(201);
+        s1.setName("Himanshu");
+        s1.setSalary(60000);
+        s1.setIncentive(1000);
+        s1.setTarget(100);
+
+        s2.setId(202);
+        s2.setName("Nikhil");
+        s2.setSalary(55000);
+        s2.setIncentive(2000);
+        s2.setTarget(120);
+
+        System.out.println("\n--- Sales Manager Details ---");
+        s1.display();
+        System.out.println();
+        s2.display();
+    }
+}
+//Class TestSalesManager ends here

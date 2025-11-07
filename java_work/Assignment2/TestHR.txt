@@ -1,0 +1,82 @@
+class HR {
+    int id;
+    String name;
+    double salary;
+    double commission;
+
+    HR() {
+        System.out.println("Constructor called");
+        this.id = 101;
+        this.name = "Default Name";
+        this.salary = 20000;
+        this.commission = 2000;
+    }
+
+    void setId(int i) {
+        this.id = i;
+    }
+
+    void setName(String n) {
+        this.name = n;
+    }
+
+    void setSalary(double s) {
+        this.salary = s;
+    }
+
+    void setCommission(double c) {
+        this.commission = c;
+    }
+
+    int getId() {
+        return this.id;
+    }
+
+    String getName() {
+        return this.name;
+    }
+
+    double getSalary() {
+        return this.salary;
+    }
+
+    double getCommission() {
+        return this.commission;
+    }
+
+    void display() {
+        System.out.println(" HR Id          : " + this.id);
+        System.out.println(" HR Name        : " + this.name);
+        System.out.println(" HR Salary      : " + this.salary);
+        System.out.println(" HR Commission  : " + this.commission);
+    }
+} 
+//class HR ends here
+
+class TestHR {
+    public static void main(String[] args) {
+        HR h1, h2;
+        h1 = new HR();
+        h2 = new HR();
+
+        h1.setId(106);
+        h1.setName("Himanshu");
+        h1.setSalary(25000);
+        h1.setCommission(10000);
+
+        h2.setId(107);
+        h2.setName("Nikhil");
+        h2.setSalary(20000);
+        h2.setCommission(2000);
+
+        // Compare salaries
+        if (h1.getSalary() > h2.getSalary()) {
+            System.out.println("\nHighest Salary belongs to:");
+            h1.display();
+        } else {
+            System.out.println("\nHighest Salary belongs to:");
+            h2.display();
+        }
+    }
+}
+//Class TestHR ends here
